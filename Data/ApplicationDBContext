@@ -1,0 +1,11 @@
+using Microsoft.EntityFrameworkCore;
+
+public class ApplicationDBContext : DbContext {
+
+    public DbSet<Usuario> Usuarios { get; set; }
+    public DbSet<Kibbe> Kibbes { get; set; }
+    public DbSet<Caratcteristicas> Caratcteristicas { get; set; }
+
+
+    public ApplicationDBContext(DbContextOptions<ApplicationDBContext>options) : base(options){}
+}
